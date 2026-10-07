@@ -36,6 +36,39 @@ async function testFetch() {
     }
   }
   console.log(`✓ All ${urls.length} HTTP asset endpoints respond with status 200 OK.`);
+
+  // 2. Verify Calculator HTML content matches updated requirements
+  const htmlRes = await fetch('http://localhost:8080/index.html');
+  const html = await htmlRes.text();
+
+  if (!html.includes('675 gram <em>— Rujukan yang umum digunakan</em>')) {
+    throw new Error('Missing updated 675 gram wording');
+  }
+  if (!html.includes('≈ 1 mud makanan pokok')) {
+    throw new Error('Missing 1 mud note');
+  }
+  if (!html.includes('Rujukan: NU Online &amp; MUI')) {
+    throw new Error('Missing NU Online & MUI citation');
+  }
+  if (!html.includes('Acuan BAZNAS RI 2026')) {
+    throw new Error('Missing Acuan BAZNAS RI 2026 note');
+  }
+  if (!html.includes('Sesuai ketetapan daerah setempat')) {
+    throw new Error('Missing regional BAZNAS note');
+  }
+  if (!html.includes('Diserahkan kepada fakir atau miskin.')) {
+    throw new Error('Missing safe distribution text');
+  }
+  if (!html.includes('Satu mud makanan pokok untuk setiap hari yang ditinggalkan.')) {
+    throw new Error('Missing 1 mud per day distribution text');
+  }
+  
+  // Verify monetary calculator box has no Mazhab Hanafi label
+  const monetaryBoxMatch = html.match(/id="calc-monetary-box"[\s\S]*?<\/div>\s*<\/div>/);
+  if (monetaryBoxMatch && monetaryBoxMatch[0].includes('Mazhab Hanafi')) {
+    throw new Error('calc-monetary-box still contains Mazhab Hanafi');
+  }
+  console.log('✓ Calculator HTML content & copywriting fully verified.');
 }
 
 testFetch().then(() => {

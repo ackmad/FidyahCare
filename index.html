@@ -210,8 +210,9 @@
                 <label class="staple-option active" data-staple="mud_shafii_675">
                   <span class="staple-dot"></span>
                   <span class="staple-body">
-                    <span class="staple-name">675 gram <em>— Umum di Indonesia</em></span>
-                    <span class="staple-note">Rujukan NU Online & MUI</span>
+                    <span class="staple-name">675 gram <em>— Rujukan yang umum digunakan</em></span>
+                    <span class="staple-note">≈ 1 mud makanan pokok</span>
+                    <span class="staple-note">Rujukan: NU Online &amp; MUI</span>
                   </span>
                   <span class="staple-val">675 g</span>
                 </label>
@@ -253,6 +254,7 @@
                   <span class="staple-body">
                     <span class="staple-name">BAZNAS RI 2026</span>
                     <span class="staple-note">Rp65.000 per hari per jiwa</span>
+                    <span class="staple-note">Acuan BAZNAS RI 2026</span>
                   </span>
                   <span class="staple-val gold">Rp65k</span>
                 </label>
@@ -260,7 +262,7 @@
                   <span class="staple-dot"></span>
                   <span class="staple-body">
                     <span class="staple-name">BAZNAS Daerah / Kustom</span>
-                    <span class="staple-note">Sesuai SK daerah setempat</span>
+                    <span class="staple-note">Sesuai ketetapan daerah setempat</span>
                   </span>
                   <input id="input-custom-monetary" class="inline-input hidden" type="number" value="50000" min="5000" step="5000" placeholder="Rp">
                 </label>
@@ -274,24 +276,27 @@
             <div class="result-numbers">
               <div class="result-number-item">
                 <div class="result-number-label">Satuan Pokok</div>
-                <div id="calc-out-mud" class="result-number-val">1 Mud</div>
+                <div id="calc-out-mud" class="result-number-val">1 Mud Makanan Pokok</div>
               </div>
               <div class="result-divider"></div>
               <div class="result-number-item">
                 <div class="result-number-label">Estimasi Beras</div>
-                <div id="calc-out-kg" class="result-number-val result-number-val--large">0.68 kg</div>
+                <div id="calc-out-kg" class="result-number-val result-number-val--large">0,68 kg</div>
               </div>
             </div>
 
             <div id="calc-monetary-box" class="result-monetary hidden">
               <div class="result-monetary-label">Estimasi Nilai Uang</div>
               <div id="calc-out-rp" class="result-monetary-val">Rp 65.000</div>
-              <div class="result-monetary-note">Rujukan BAZNAS / Mazhab Hanafi · bukan tarif mutlak</div>
+              <div id="calc-monetary-note" class="result-monetary-note">Acuan BAZNAS RI 2026</div>
             </div>
 
             <div class="result-note">
               <i data-lucide="users"></i>
-              Diserahkan kepada fakir dan miskin — boleh kepada satu orang atau beberapa orang.
+              <div>
+                <div>Diserahkan kepada fakir atau miskin.</div>
+                <div>Satu mud makanan pokok untuk setiap hari yang ditinggalkan.</div>
+              </div>
             </div>
 
             <button id="btn-copy-calc" class="btn-primary" style="width:100%;">

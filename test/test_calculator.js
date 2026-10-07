@@ -90,4 +90,50 @@ const sourcesMap = new Map(sources.map(s => [s.id, s]));
   console.log('✓ Test 6 (Calculator Source Whitelist Check) PASSED: All source IDs verified against SOURCE_REGISTRY.');
 }
 
+// 7. Validasi Matematika & UI Rounding (1 hari dan 3 hari)
+{
+  // 1 hari + 675g
+  const res1 = calculateFidyah({ days: 1, stapleFrameworkId: 'mud_shafii_675', includeMonetary: true, monetaryFrameworkId: 'baznas_ri_2026', sourcesMap });
+  assert(res1.staple_food.total_grams === 675, '1 hari * 675g = 675g');
+  assert(res1.staple_food.total_kg_exact === 0.675, '1 hari * 675g = 0.675 kg');
+  assert(res1.staple_food.total_kg === 0.68, '1 hari * 675g pembulatan UI 2 desimal = 0.68');
+  assert(res1.monetary.totalAmount === 65000, '1 hari * Rp65.000 = Rp65.000');
+  assert(!res1.monetary.frameworkName.includes('Hanafi'), 'Framework name must not include Hanafi');
+  assert(!res1.monetary.citation.includes('Hanafi'), 'Citation must not include Hanafi');
+
+  // 3 hari + 675g
+  const res3 = calculateFidyah({ days: 3, stapleFrameworkId: 'mud_shafii_675', includeMonetary: true, monetaryFrameworkId: 'baznas_ri_2026', sourcesMap });
+  assert(res3.staple_food.total_grams === 2025, '3 hari * 675g = 2025g');
+  assert(res3.staple_food.total_kg_exact === 2.025, '3 hari * 675g = 2.025 kg');
+  assert(res3.monetary.totalAmount === 195000, '3 hari * Rp65.000 = Rp195.000');
+
+  // 30 hari + Rp65.000
+  const res30 = calculateFidyah({ days: 30, stapleFrameworkId: 'mud_shafii_675', includeMonetary: true, monetaryFrameworkId: 'baznas_ri_2026', sourcesMap });
+  assert(res30.monetary.totalAmount === 1950000, '30 hari * Rp65.000 = Rp1.950.000');
+  console.log('✓ Test 7 (Perhitungan 1, 3, dan 30 hari) PASSED.');
+}
+
+// 8. Independensi Perhitungan Beras & Uang
+{
+  const baseRes = calculateFidyah({ days: 5, stapleFrameworkId: 'mud_shafii_675', includeMonetary: true, monetaryFrameworkId: 'baznas_ri_2026', sourcesMap });
+  const changeStapleRes = calculateFidyah({ days: 5, stapleFrameworkId: 'mud_ikhtiyath_750', includeMonetary: true, monetaryFrameworkId: 'baznas_ri_2026', sourcesMap });
+  // Perubahan takaran beras tidak mengubah nominal uang
+  assert(baseRes.monetary.totalAmount === changeStapleRes.monetary.totalAmount, 'Perubahan beras tidak boleh mengubah nominal uang');
+  assert(baseRes.staple_food.total_grams !== changeStapleRes.staple_food.total_grams, 'Beras harus berubah sesuai takaran');
+
+  // Perubahan nominal uang tidak mengubah takaran beras
+  const changeMoneyRes = calculateFidyah({ days: 5, stapleFrameworkId: 'mud_shafii_675', includeMonetary: true, monetaryFrameworkId: 'baznas_daerah_custom', customMonetaryAmount: 40000, sourcesMap });
+  assert(baseRes.staple_food.total_grams === changeMoneyRes.staple_food.total_grams, 'Perubahan uang tidak boleh mengubah takaran beras');
+  assert(baseRes.monetary.totalAmount !== changeMoneyRes.monetary.totalAmount, 'Nominal uang harus berubah');
+  console.log('✓ Test 8 (Independensi Perhitungan Beras & Uang) PASSED.');
+}
+
+// 9. Distribusi & Penyaluran Sesuai Syariat Aman
+{
+  const res = calculateFidyah({ days: 1, stapleFrameworkId: 'mud_shafii_675', sourcesMap });
+  assert(res.distribution_guidance.recipient === 'Fakir atau miskin', 'Recipient harus fakir atau miskin');
+  assert(res.distribution_guidance.methods.some(m => m.includes('Satu mud makanan pokok untuk setiap hari')), 'Metode harus memuat 1 mud per hari');
+  console.log('✓ Test 9 (Distribusi & Penyaluran Aman) PASSED.');
+}
+
 console.log('--- ALL CALCULATOR TESTS PASSED SUCCESSFULLY! ---');

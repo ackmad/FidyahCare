@@ -375,14 +375,15 @@ class FidyahCareApp {
   copyCalculatorSummary() {
     if (!this.currentCalcData) return;
     const c = this.currentCalcData;
+    const kgFormatted = c.staple_food.total_kg.toString().replace('.', ',');
     let text = `*Rincian Perhitungan Fidyah (Fidyah Care)*\n`;
     text += `• Hari Puasa: ${c.days} hari\n`;
-    text += `• Satuan Pokok (Nash): ${c.primary_unit.unit_label}\n`;
-    text += `• Bahan Pokok: ${c.staple_food.total_kg} kg Beras (${c.staple_food.framework_name})\n`;
+    text += `• Satuan Pokok: ${c.primary_unit.unit_label}\n`;
+    text += `• Estimasi Beras: ${kgFormatted} kg (${c.staple_food.framework_name})\n`;
     if (c.monetary) {
-      text += `• Opsi Uang (Hanafi/BAZNAS): ${c.monetary.totalFormatted} (${c.monetary.frameworkName})\n`;
+      text += `• Estimasi Nilai Uang: ${c.monetary.totalFormatted} (${c.monetary.citation || c.monetary.frameworkName})\n`;
     }
-    text += `• Peruntukan: Fakir & Miskin\n`;
+    text += `• Penyaluran: Diserahkan kepada fakir atau miskin. Satu mud makanan pokok untuk setiap hari yang ditinggalkan.\n`;
     text += `• Rujukan: ${c.sources.map(s => s.title).join(', ')}\n`;
     text += `_Dihitung melalui Fidyah Care (KB v2.3 - Sesuai Sumber Sahih)_`;
 

@@ -8,15 +8,15 @@ export const CONVERSION_FRAMEWORKS = {
   STAPLE_FOOD: [
     {
       id: 'mud_shafii_675',
-      name: 'Beras ~675 gram / Mud (Rujukan Fiqh Syafi\'iyyah di Indonesia)',
+      name: '675 gram — Rujukan yang umum digunakan',
       gramsPerDay: 675,
       source_ids: ['SRC-NU-002', 'SRC-MUI-001'],
-      citation: 'NU Online & MUI (Konversi 1 Mud Syafi\'i)',
-      description: 'Takaran 1 mud setara cakupan dua telapak tangan orang dewasa sedang, lazim dikonversikan di Indonesia sekitar 675 gram (0,675 kg) beras.'
+      citation: 'Rujukan: NU Online & MUI',
+      description: 'Takaran 1 mud setara cakupan dua telapak tangan orang dewasa sedang, lazim dirujuk di Indonesia sekitar 675 gram (0,675 kg) beras.'
     },
     {
       id: 'mud_ikhtiyath_750',
-      name: 'Beras ~750 gram / Mud (Pendekatan Kehati-hatian / Ikhtiyath)',
+      name: '750 gram — Lebih hati-hati',
       gramsPerDay: 750,
       source_ids: ['SRC-NU-002'],
       citation: 'NU Online (Pendekatan Ikhtiyath)',
@@ -24,7 +24,7 @@ export const CONVERSION_FRAMEWORKS = {
     },
     {
       id: 'mud_custom',
-      name: 'Kustom Takaran Gram Makanan Pokok',
+      name: 'Kustom',
       gramsPerDay: null,
       source_ids: ['SRC-QURAN-001'],
       citation: 'Penyesuaian Mandiri Berdasarkan Takaran Lokal',
@@ -34,21 +34,21 @@ export const CONVERSION_FRAMEWORKS = {
   MONETARY: [
     {
       id: 'baznas_ri_2026',
-      name: 'Rujukan Operasional BAZNAS RI 2026 (Rp65.000 / hari)',
+      name: 'BAZNAS RI 2026',
       amountPerDay: 65000,
       year: 2026,
-      source_ids: ['SRC-BAZNAS-002', 'SRC-NU-001'],
-      citation: 'SK BAZNAS RI Ramadan 2026 & Mazhab Hanafi (Qimah)',
-      description: 'Ketetapan BAZNAS RI tahun 2026 untuk penyaluran paket makanan bergizi siap saji senilai Rp65.000/jiwa/hari (bukan tarif abadi syariat, melainkan rujukan operasional 2026).'
+      source_ids: ['SRC-BAZNAS-002'],
+      citation: 'Acuan BAZNAS RI 2026',
+      description: 'Ketetapan BAZNAS RI tahun 2026 untuk penyaluran paket makanan bergizi siap saji senilai Rp65.000/jiwa/hari (acuan BAZNAS RI 2026, bukan tarif universal mutlak).'
     },
     {
       id: 'baznas_daerah_custom',
-      name: 'Rujukan BAZNAS Daerah / Kustom Nominal Uang',
+      name: 'BAZNAS Daerah / Kustom',
       amountPerDay: null,
       year: 2026,
-      source_ids: ['SRC-BAZNAS-003', 'SRC-NU-001'],
-      citation: 'BAZNAS Daerah & Mazhab Hanafi (Qimah)',
-      description: 'Nominal rupiah per hari yang disesuaikan dengan SK BAZNAS kabupaten/kota atau standar biaya makan di daerah domisili.'
+      source_ids: ['SRC-BAZNAS-003'],
+      citation: 'Sesuai ketetapan daerah setempat',
+      description: 'Nominal rupiah per hari yang disesuaikan dengan ketetapan BAZNAS daerah setempat atau standar biaya makan lokal.'
     }
   ]
 };
@@ -80,6 +80,7 @@ export function calculateFidyah({
 
   const totalGrams = safeDays * effectiveGramsPerDay;
   const totalKg = totalGrams / 1000;
+  const roundedKg = Math.round(totalKg * 100) / 100;
 
   // 3. Perhitungan Kerangka Moneter (Uang) jika diaktifkan
   let monetaryResult = null;
@@ -133,16 +134,16 @@ export function calculateFidyah({
       framework_name: stapleConfig.name,
       grams_per_day: effectiveGramsPerDay,
       total_grams: totalGrams,
-      total_kg: parseFloat(totalKg.toFixed(2)),
+      total_kg: roundedKg,
+      total_kg_exact: totalKg,
       description: stapleConfig.description,
       citation: stapleConfig.citation
     },
     monetary: monetaryResult,
     distribution_guidance: {
-      recipient: 'Fakir dan Miskin (orang yang tidak mampu mencukupi kebutuhan pokok sehari-hari)',
+      recipient: 'Fakir atau miskin',
       methods: [
-        'Dapat diberikan sekaligus kepada 1 orang miskin (misal 5 mud untuk 5 hari).',
-        'Dapat dibagikan kepada beberapa orang miskin yang berbeda.',
+        'Satu mud makanan pokok untuk setiap hari yang ditinggalkan.',
         'Dapat disalurkan secara amanah melalui lembaga amil resmi (seperti BAZNAS atau LAZ terakreditasi).'
       ]
     },

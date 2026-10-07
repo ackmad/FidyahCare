@@ -473,14 +473,23 @@ export class UIManager {
     const mudEl = document.getElementById('calc-out-mud');
     const kgEl  = document.getElementById('calc-out-kg');
     if (mudEl) mudEl.textContent = calcData.primary_unit.unit_label;
-    if (kgEl)  kgEl.textContent  = `${calcData.staple_food.total_kg} kg`;
+    if (kgEl) {
+      const kgFormatted = calcData.staple_food.total_kg.toString().replace('.', ',');
+      kgEl.textContent  = `${kgFormatted} kg`;
+    }
 
     const monetaryBox = document.getElementById('calc-monetary-box');
     const outRp = document.getElementById('calc-out-rp');
+    const monetaryNoteEl = document.getElementById('calc-monetary-note');
 
     if (calcData.monetary) {
       if (monetaryBox) monetaryBox.classList.remove('hidden');
       if (outRp) outRp.textContent = calcData.monetary.totalFormatted;
+      if (monetaryNoteEl) {
+        monetaryNoteEl.textContent = calcData.monetary.frameworkId === 'baznas_ri_2026'
+          ? 'Acuan BAZNAS RI 2026'
+          : 'Sesuai ketetapan daerah setempat';
+      }
     } else {
       if (monetaryBox) monetaryBox.classList.add('hidden');
     }
