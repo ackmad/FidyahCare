@@ -32,11 +32,11 @@ const requiredFiles = [
   'assets/data/sources.json',
   'assets/data/rules.json',
   'assets/data/decisionTree.json',
-  'ROADMAP.md',
-  'CHECKLIST.md',
-  'CURRENT_STATE.md',
-  'PROGRESS_LOG.md',
-  'CHANGELOG.md',
+  'docs/ROADMAP.md',
+  'docs/CHECKLIST.md',
+  'docs/CURRENT_STATE.md',
+  'docs/PROGRESS_LOG.md',
+  'docs/CHANGELOG.md',
   'CHECKPOINT.json'
 ];
 
