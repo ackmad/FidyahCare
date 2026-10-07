@@ -1,0 +1,113 @@
+/**
+ * Fidyah Care — Design System Variables
+ * Direction: Modern Islamic × Calm × Trustworthy × Friendly × Premium.
+ */
+
+:root {
+  /* Brand Primary: Deep Forest & Emerald Green */
+  --primary: #0D5C3A;
+  --primary-hover: #09472C;
+  --primary-dark: #06331F;
+  --primary-subtle: #F0F7F3;
+  --primary-border: #C8E3D4;
+  --primary-glow: rgba(13, 92, 58, 0.12);
+
+  /* Warm Gold / Amber Accent */
+  --gold: #B47818;
+  --gold-hover: #966210;
+  --gold-light: #FDF9EE;
+  --gold-border: #EEDCA8;
+  --gold-text: #784805;
+
+  /* Surfaces & Backgrounds */
+  --bg-base: #F8F9F7;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-muted: #F1F4F0;
+  --bg-subtle: #F5F7F4;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+
+  /* Text & Typography Hierarchy */
+  --text-primary: #1A2421;
+  --text-secondary: #4A5652;
+  --text-muted: #6E7D77;
+  --text-light: #94A39D;
+  --text-inverse: #FFFFFF;
+
+  /* Borders & Dividers */
+  --border-color: #E2E8E4;
+  --border-subtle: #EDF2EE;
+  --border-focus: #0D5C3A;
+
+  /* Semantic Functional Status Tokens */
+  --status-verified-bg: #EAF7EE;
+  --status-verified-text: #0E623B;
+  --status-verified-border: #B7E8C7;
+
+  --status-ikhtilaf-bg: #FEF6E6;
+  --status-ikhtilaf-text: #8A4E08;
+  --status-ikhtilaf-border: #F8DAA0;
+
+  --status-framework-bg: #EBF5FB;
+  --status-framework-text: #0C5485;
+  --status-framework-border: #BDDFF3;
+
+  --status-review-bg: #FDF1F1;
+  --status-review-text: #961C1C;
+  --status-review-border: #F8C3C3;
+
+  --status-info-bg: #F0F4F8;
+  --status-info-text: #2C3E50;
+  --status-info-border: #D1DCE5;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-arabic: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
+  
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-md: 1.125rem;    /* 18px */
+  --text-lg: 1.25rem;     /* 20px */
+  --text-xl: 1.5rem;      /* 24px */
+  --text-2xl: 1.875rem;   /* 30px */
+  --text-3xl: 2.25rem;    /* 36px */
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(16, 32, 24, 0.04), 0 1px 2px rgba(16, 32, 24, 0.02);
+  --shadow-card: 0 4px 16px rgba(16, 32, 24, 0.05), 0 1px 3px rgba(16, 32, 24, 0.03);
+  --shadow-hover: 0 8px 24px rgba(13, 92, 58, 0.09), 0 2px 6px rgba(13, 92, 58, 0.04);
+  --shadow-float: 0 12px 36px rgba(16, 32, 24, 0.12), 0 4px 12px rgba(16, 32, 24, 0.06);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Widths */
+  --container-max-width: 1200px;
+  --text-max-width: 68ch;
+}

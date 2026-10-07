@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fidyah Care — Panduan puasa, qadha, dan kalkulator fidyah berbasis Al-Qur'an dan Hadits Sahih.">
+  <meta name="theme-color" content="#0D5C3A">
+  <title>Fidyah Care — Panduan Puasa & Fidyah</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/desktop.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- ═══════════════════════════════════════════
+         HEADER (Mobile: brand only | Desktop: brand + nav)
+         ═══════════════════════════════════════════ -->
+    <header class="site-header" id="site-header">
+      <div class="site-header-inner">
+        <button class="header-brand" id="btn-goto-home" aria-label="Kembali ke Beranda">
+          <span class="header-logo" aria-hidden="true">🌙</span>
+          <span class="header-wordmark">Fidyah Care</span>
+        </button>
+
+        <!-- Desktop Nav (hidden on mobile) -->
+        <nav class="desktop-nav" aria-label="Navigasi Utama">
+          <button class="dnav-link active" data-view="home" id="dnav-home"><i data-lucide="home"></i> Beranda</button>
+          <button class="dnav-link" data-view="wizard" id="dnav-wizard"><i data-lucide="compass"></i> Pahami</button>
+          <button class="dnav-link" data-view="calculator" id="dnav-calculator"><i data-lucide="scale"></i> Kalkulator</button>
+          <button class="dnav-link" data-view="knowledge" id="dnav-knowledge"><i data-lucide="book-open"></i> Dasar Hukum</button>
+          <button class="dnav-link" data-view="audit" id="dnav-audit"><i data-lucide="shield-check"></i> Transparansi</button>
+          <button class="dnav-link" data-view="creator" id="dnav-creator"><i data-lucide="user"></i> Pembuat</button>
+        </nav>
+
+        <div class="site-header-spacer" aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════
+         MAIN CONTENT
+         ═══════════════════════════════════════════ -->
+    <main class="site-main" id="site-main">
+
+      <!-- ─── 1. BERANDA — Navigation Hub ─── -->
+      <section id="view-home" class="page active">
+        <div class="page-hero">
+          <h2 class="page-hero-title">Bantuan Puasa & Fidyah yang Sederhana</h2>
+          <p class="page-hero-desc">Panduan berdasarkan Al-Qur'an, Hadits Sahih, dan fatwa MUI — mudah dipahami, jujur tentang perbedaan pendapat ulama.</p>
+        </div>
+
+        <div class="hub-grid">
+          <button class="hub-card hub-card--primary" id="btn-home-wizard" data-view="wizard">
+            <div class="hub-card-icon"><i data-lucide="compass"></i></div>
+            <div class="hub-card-body">
+              <div class="hub-card-title">Pahami Kondisi Saya</div>
+              <div class="hub-card-desc">Jawab beberapa pertanyaan — sistem akan memberi panduan yang sesuai.</div>
+            </div>
+            <i data-lucide="arrow-right" class="hub-card-arrow"></i>
+          </button>
+
+          <button class="hub-card" id="btn-home-calc" data-view="calculator">
+            <div class="hub-card-icon hub-card-icon--gold"><i data-lucide="scale"></i></div>
+            <div class="hub-card-body">
+              <div class="hub-card-title">Hitung Fidyah</div>
+              <div class="hub-card-desc">Kalkulator beras per hari dan estimasi nilai uang (BAZNAS 2026).</div>
+            </div>
+            <i data-lucide="arrow-right" class="hub-card-arrow"></i>
+          </button>
+
+          <button class="hub-card" id="btn-home-knowledge" data-view="knowledge">
+            <div class="hub-card-icon hub-card-icon--blue"><i data-lucide="book-open"></i></div>
+            <div class="hub-card-body">
+              <div class="hub-card-title">Dasar Hukum</div>
+              <div class="hub-card-desc">Jelajahi dalil, aturan syariat, dan perbedaan pendapat ulama.</div>
+            </div>
+            <i data-lucide="arrow-right" class="hub-card-arrow"></i>
+          </button>
+        </div>
+
+        <p class="home-disclaimer">
+          <i data-lucide="info"></i>
+          Fidyah Care adalah alat edukasi — bukan mesin fatwa. Selalu konsultasikan keputusan akhir dengan ustaz atau ahli fikih terpercaya.
+        </p>
+
+        <!-- Banner Tentang Pembuat (Akses Khusus Creator) -->
+        <div class="home-creator-banner">
+          <div class="creator-banner-left">
+            <div class="creator-banner-avatar" aria-hidden="true">AEP</div>
+            <div class="creator-banner-text">
+              <span class="creator-banner-label">RPL UPI CIBIRU &bull; Di Balik Fidyah Care</span>
+              <span class="creator-banner-name">Ackmad Elfan Purnama</span>
+            </div>
+          </div>
+          <button class="btn-creator-link" id="btn-home-creator" data-view="creator">
+            <span>Tentang Pembuat</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- ─── 2. PAHAMI KONDISIKU — Wizard ─── -->
+      <section id="view-wizard" class="page">
+
+        <!-- Question State -->
+        <div id="wizard-question-box">
+          <div class="wizard-header">
+            <button id="btn-wizard-back" class="btn-ghost-small hidden"><i data-lucide="arrow-left"></i> Kembali</button>
+            <span id="wizard-step-badge" class="step-chip">Langkah 1</span>
+            <button id="btn-wizard-reset" class="btn-ghost-small"><i data-lucide="rotate-ccw"></i></button>
+          </div>
+
+          <div class="progress-bar-wrap">
+            <div id="wizard-progress-bar" class="progress-bar-fill" style="width:25%;"></div>
+          </div>
+
+          <div class="wizard-question-area">
+            <div id="wizard-question-title" class="question-category">Evaluasi Kondisi</div>
+            <h2 id="wizard-question-text" class="question-text">Memuat...</h2>
+            <p id="wizard-question-help" class="question-hint">Pilih salah satu di bawah ini.</p>
+          </div>
+
+          <div id="wizard-options-container" class="option-list"></div>
+        </div>
+
+        <!-- Result State -->
+        <div id="wizard-result-box" class="hidden">
+          <div id="result-badge-group" class="result-badges"></div>
+
+          <div class="result-verdict">
+            <div class="result-verdict-label">Panduan untuk kondisi Anda</div>
+            <h2 id="result-action-title" class="result-verdict-title">Memuat hasil...</h2>
+          </div>
+
+          <div id="result-detailed-explanation" class="result-explanation"></div>
+
+          <div id="result-caveats-box" class="result-caveat">
+            <i data-lucide="alert-triangle"></i>
+            <span id="result-caveats-text"></span>
+          </div>
+
+          <details class="result-sources-detail">
+            <summary class="result-sources-summary">
+              <i data-lucide="book-marked"></i> Lihat dalil & rujukan
+              <i data-lucide="chevron-down" class="detail-chevron"></i>
+            </summary>
+            <div id="result-sources-container" class="result-sources-list"></div>
+          </details>
+
+          <div class="result-actions">
+            <button id="btn-result-to-calc" class="btn-primary hidden">
+              <i data-lucide="scale"></i> Hitung Besaran Fidyah
+            </button>
+            <div class="result-secondary-actions">
+              <button id="btn-result-restart" class="btn-outline-small">
+                <i data-lucide="rotate-ccw"></i> Kondisi Lain
+              </button>
+              <button id="btn-result-inspect-trace" class="btn-outline-small">
+                <i data-lucide="shield-check"></i> Lihat Transparansi
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 3. KALKULATOR ─── -->
+      <section id="view-calculator" class="page">
+        <div class="calc-layout">
+          <!-- Input Panel -->
+          <div class="calc-panel">
+            <div class="calc-panel-header">
+              <h2 class="panel-title">Kalkulator Fidyah</h2>
+              <p class="panel-desc">Masukkan jumlah hari lalu pilih rujukan takaran.</p>
+            </div>
+
+            <!-- Step 1: Hari -->
+            <div class="calc-field">
+              <label class="field-label" for="calc-days-input">
+                <span class="field-num">1</span> Jumlah hari yang ditinggalkan
+              </label>
+              <div class="days-control">
+                <button id="btn-calc-minus" class="btn-counter" type="button" aria-label="Kurangi">−</button>
+                <input type="number" id="calc-days-input" class="days-input" value="1" min="1" max="365" aria-label="Jumlah hari">
+                <button id="btn-calc-plus" class="btn-counter" type="button" aria-label="Tambah">+</button>
+              </div>
+              <div class="preset-pills">
+                <button class="preset-pill active" data-days="1">1</button>
+                <button class="preset-pill" data-days="3">3</button>
+                <button class="preset-pill" data-days="7">7</button>
+                <button class="preset-pill" data-days="15">15</button>
+                <button class="preset-pill" data-days="30">30</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Takaran -->
+            <div class="calc-field">
+              <div class="field-label">
+                <span class="field-num">2</span> Takaran beras per hari (1 mud)
+              </div>
+              <div class="staple-options">
+                <label class="staple-option active" data-staple="mud_shafii_675">
+                  <span class="staple-dot"></span>
+                  <span class="staple-body">
+                    <span class="staple-name">675 gram <em>— Umum di Indonesia</em></span>
+                    <span class="staple-note">Rujukan NU Online & MUI</span>
+                  </span>
+                  <span class="staple-val">675 g</span>
+                </label>
+                <label class="staple-option" data-staple="mud_ikhtiyath_750">
+                  <span class="staple-dot"></span>
+                  <span class="staple-body">
+                    <span class="staple-name">750 gram <em>— Lebih hati-hati</em></span>
+                    <span class="staple-note">Pembulatan untuk memastikan cukup</span>
+                  </span>
+                  <span class="staple-val">750 g</span>
+                </label>
+                <label class="staple-option" data-staple="mud_custom">
+                  <span class="staple-dot"></span>
+                  <span class="staple-body">
+                    <span class="staple-name">Kustom</span>
+                    <span class="staple-note">Sesuai timbangan atau standar lokal</span>
+                  </span>
+                  <input id="input-custom-grams" class="inline-input hidden" type="number" value="675" min="100" max="2000" step="25" placeholder="gram">
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3: Uang (opsional) -->
+            <div class="calc-field">
+              <div class="field-toggle-row">
+                <div class="field-label" style="margin-bottom:0;">
+                  <span class="field-num">3</span> Tampilkan estimasi nilai uang
+                  <span class="field-optional">(opsional)</span>
+                </div>
+                <label class="toggle-switch" aria-label="Tampilkan estimasi uang">
+                  <input type="checkbox" id="toggle-monetary">
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <div id="monetary-options-wrapper" class="hidden monetary-options">
+                <label class="staple-option active" data-monetary="baznas_ri_2026">
+                  <span class="staple-dot"></span>
+                  <span class="staple-body">
+                    <span class="staple-name">BAZNAS RI 2026</span>
+                    <span class="staple-note">Rp65.000 per hari per jiwa</span>
+                  </span>
+                  <span class="staple-val gold">Rp65k</span>
+                </label>
+                <label class="staple-option" data-monetary="baznas_daerah_custom">
+                  <span class="staple-dot"></span>
+                  <span class="staple-body">
+                    <span class="staple-name">BAZNAS Daerah / Kustom</span>
+                    <span class="staple-note">Sesuai SK daerah setempat</span>
+                  </span>
+                  <input id="input-custom-monetary" class="inline-input hidden" type="number" value="50000" min="5000" step="5000" placeholder="Rp">
+                </label>
+              </div>
+            </div>
+          </div><!-- /.calc-panel -->
+
+          <!-- Result Panel -->
+          <div class="calc-result-panel">
+            <div class="result-panel-header">Hasil Perhitungan</div>
+            <div class="result-numbers">
+              <div class="result-number-item">
+                <div class="result-number-label">Satuan Pokok</div>
+                <div id="calc-out-mud" class="result-number-val">1 Mud</div>
+              </div>
+              <div class="result-divider"></div>
+              <div class="result-number-item">
+                <div class="result-number-label">Estimasi Beras</div>
+                <div id="calc-out-kg" class="result-number-val result-number-val--large">0.68 kg</div>
+              </div>
+            </div>
+
+            <div id="calc-monetary-box" class="result-monetary hidden">
+              <div class="result-monetary-label">Estimasi Nilai Uang</div>
+              <div id="calc-out-rp" class="result-monetary-val">Rp 65.000</div>
+              <div class="result-monetary-note">Rujukan BAZNAS / Mazhab Hanafi · bukan tarif mutlak</div>
+            </div>
+
+            <div class="result-note">
+              <i data-lucide="users"></i>
+              Diserahkan kepada fakir dan miskin — boleh kepada satu orang atau beberapa orang.
+            </div>
+
+            <button id="btn-copy-calc" class="btn-primary" style="width:100%;">
+              <i data-lucide="copy"></i> Salin Ringkasan
+            </button>
+          </div><!-- /.calc-result-panel -->
+        </div>
+      </section>
+
+      <!-- ─── 4. DASAR HUKUM ─── -->
+      <section id="view-knowledge" class="page">
+        <div class="knowledge-page-header">
+          <h2 class="panel-title">Dasar Hukum & Sumber</h2>
+          <p class="panel-desc">Seluruh panduan mengacu pada dalil sahih yang sudah diverifikasi.</p>
+        </div>
+
+        <div class="knowledge-tabs">
+          <button id="subnav-rules" class="ktab active" data-tab="rules">
+            <i data-lucide="scale"></i> Ketentuan Puasa & Fidyah
+          </button>
+          <button id="subnav-sources" class="ktab" data-tab="sources">
+            <i data-lucide="book-open"></i> Rujukan & Dalil Sahih
+          </button>
+          <button id="subnav-foundation" class="ktab" data-tab="foundation">
+            <i data-lucide="scroll"></i> Ayat Utama (Al-Baqarah 184–185)
+          </button>
+        </div>
+
+        <div id="tab-rules-content" class="ktab-content rules-list"></div>
+        <div id="tab-sources-content" class="ktab-content sources-list hidden"></div>
+        <div id="tab-foundation-content" class="ktab-content foundation-content hidden">
+          <span class="inline-badge badge-green"><i data-lucide="check-circle"></i> Terverifikasi</span>
+          <h3 class="foundation-title">QS Al-Baqarah 2:184–185</h3>
+          <p class="foundation-desc">Dua ayat ini menjadi pilar utama untuk rukhsah puasa, qadha bagi yang sakit dan musafir, serta fidyah bagi yang tidak mampu.</p>
+          <div class="arabic-text">
+            أَيَّامًا مَّعْدُودَٰتٍ ۚ فَمَن كَانَ مِنكُم مَّرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِّنْ أَيَّامٍ أُخَرَ ۚ وَعَلَى ٱلَّذِينَ يُطِيقُونَهُۥ فِدْيَةٌ طَعَامُ مِسْكِينٍ
+          </div>
+          <p class="foundation-translation">"...Dan bagi orang yang berat menjalankannya, wajib membayar fidyah, yaitu memberi makan seorang miskin..." (QS 2:184)</p>
+          <div class="foundation-note">
+            <strong>Perlu dipahami:</strong> Fidyah dalam ayat ini hanya untuk yang "berat" (yuthiiqunahu) — bukan untuk semua yang tidak berpuasa. Yang masih mampu berpuasa di hari lain wajib qadha.
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 5. TRANSPARANSI ─── -->
+      <section id="view-audit" class="page">
+        <div class="transparency-hero">
+          <div class="transparency-icon"><i data-lucide="shield-check"></i></div>
+          <div>
+            <h2 class="panel-title">Sistem Terverifikasi</h2>
+            <p class="panel-desc">Setiap panduan yang diberikan dapat ditelusuri sumbernya — dari dalil hingga keputusan yang Anda terima.</p>
+          </div>
+        </div>
+
+        <div class="trust-stats">
+          <div class="trust-stat"><span class="trust-num">22</span><span class="trust-label">Sumber Sahih</span></div>
+          <div class="trust-stat"><span class="trust-num">12</span><span class="trust-label">Aturan Syariat</span></div>
+          <div class="trust-stat"><span class="trust-num">100%</span><span class="trust-label">Terverifikasi</span></div>
+        </div>
+
+        <div class="trust-principles">
+          <div class="trust-principle">
+            <span class="principle-icon"><i data-lucide="ban"></i></span>
+            <div><strong>Tanpa Fabrikasi</strong> — hanya sumber yang sudah diverifikasi.</div>
+          </div>
+          <div class="trust-principle">
+            <span class="principle-icon"><i data-lucide="eye"></i></span>
+            <div><strong>Ikhtilaf Terbuka</strong> — perbedaan pendapat ulama diungkapkan jujur.</div>
+          </div>
+          <div class="trust-principle">
+            <span class="principle-icon"><i data-lucide="link"></i></span>
+            <div><strong>Rantai Bukti</strong> — setiap keputusan dapat dirunut ke sumbernya.</div>
+          </div>
+        </div>
+
+        <!-- Keputusan Terakhir -->
+        <div class="audit-last-decision">
+          <div class="audit-section-label"><i data-lucide="git-branch"></i> Riwayat Evaluasi Terakhir</div>
+          <div id="audit-breadcrumb-display" class="audit-trace-text">
+            Belum ada evaluasi. Gunakan fitur "Pahami Kondisi" terlebih dahulu.
+          </div>
+        </div>
+
+        <!-- Live Test -->
+        <div class="audit-verify-section">
+          <div class="audit-section-label"><i data-lucide="activity"></i> Verifikasi Sistem</div>
+          <p class="audit-verify-desc">Jalankan uji otomatis untuk memastikan seluruh sistem bekerja dengan benar.</p>
+          <button id="btn-run-live-tests" class="btn-primary" style="width:100%;">
+            <i data-lucide="play-circle"></i> Jalankan Verifikasi
+          </button>
+          <div id="live-test-results" class="hidden audit-test-output"></div>
+        </div>
+
+        <!-- Technical Details -->
+        <details class="audit-technical">
+          <summary class="audit-technical-summary">
+            <i data-lucide="code-2"></i>
+            <span>Detail Teknis & Data JSON</span>
+            <i data-lucide="chevron-down" class="detail-chevron"></i>
+          </summary>
+          <div class="audit-technical-body">
+            <div class="json-toolbar">
+              <span class="json-label">Payload JSON evaluasi terakhir</span>
+              <button id="btn-copy-audit-json" class="btn-ghost-small"><i data-lucide="copy"></i> Salin</button>
+            </div>
+            <pre id="audit-json-display" class="json-display">{}</pre>
+          </div>
+        </details>
+      </section>
+
+      <!-- ─── 6. TENTANG PEMBUAT (CREATOR PROFILE) ─── -->
+      <section id="view-creator" class="page">
+        <div class="creator-container">
+
+          <!-- Tombol kembali di atas -->
+          <div class="creator-top-bar">
+            <button id="btn-back-from-creator" class="btn-ghost-small" data-view="home">
+              <i data-lucide="arrow-left"></i> Kembali ke Beranda
+            </button>
+          </div>
+
+          <div class="creator-layout">
+            <!-- Sisi Kiri: Profil Visual & Identitas -->
+            <aside class="creator-card">
+              <div class="creator-avatar-wrap">
+                <div class="creator-avatar" aria-hidden="true">
+                  <span class="creator-initials">AEP</span>
+                </div>
+                <div class="creator-avatar-badge" title="Pengembang Fidyah Care">
+                  <i data-lucide="sparkles"></i>
+                </div>
+              </div>
+
+              <div class="creator-identity">
+                <h2 class="creator-name">Ackmad Elfan Purnama</h2>
+                <p class="creator-role">RPL UPI CIBIRU</p>
+              </div>
+
+              <div class="creator-tagline">
+                Pengembang perangkat lunak yang berikhtiar menyajikan panduan syariat dengan teknologi yang bersih, jujur, dan mudah dipahami oleh masyarakat.
+              </div>
+
+              <div class="creator-social-wrap">
+                <span class="social-label">Media Sosial</span>
+                <a href="https://instagram.com/Ackmad2019" target="_blank" rel="noopener noreferrer" class="creator-social-link" title="Instagram Ackmad Elfan Purnama">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                  </svg>
+                  <span>@Ackmad2019</span>
+                  <i data-lucide="external-link" class="social-ext-icon"></i>
+                </a>
+              </div>
+            </aside>
+
+            <!-- Sisi Kanan: Cerita, Latar Belakang & Filosofi -->
+            <div class="creator-content">
+              <div class="creator-section">
+                <span class="creator-section-badge">
+                  <i data-lucide="heart-handshake"></i> Di Balik Fidyah Care
+                </span>
+                <h3 class="creator-heading">Mengapa Fidyah Care Dibuat?</h3>
+                <p class="creator-text">
+                  Persoalan puasa, qadha, dan fidyah sering kali menimbulkan kebingungan di tengah masyarakat. Ada yang sakit kronis namun merasa bersalah karena tidak sanggup berpuasa, ada ibu hamil atau menyusui yang bimbang dengan kewajiban fidyahnya, dan ada pula keluarga yang bingung mengenai utang puasa kerabat yang telah berpulang.
+                </p>
+                <p class="creator-text">
+                  Sering kali rujukan yang beredar terasa terpecah-pecah: ada yang mencampuradukkan pendapat mazhab tanpa kejelasan, ada yang menetapkan nominal uang tanpa menyebut rujukan asalnya, dan ada pula yang menyajikan istilah fiqih dengan cara yang sulit dicerna oleh masyarakat awam.
+                </p>
+                <p class="creator-text">
+                  <strong>Fidyah Care</strong> hadir dari sebuah niat sederhana: menjembatani literasi syariat dengan antarmuka digital yang tenang, transparan, dan bertanggung jawab. Aplikasi ini tidak berpretensi mengeluarkan fatwa mandiri, melainkan merangkum dalil Al-Qur'an, Hadits Sahih, dan panduan otoritas terpercaya seperti MUI, Kemenag RI, serta BAZNAS secara jujur dan berimbang.
+                </p>
+              </div>
+
+              <!-- Philosophy Statement Box -->
+              <blockquote class="creator-quote">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <p class="quote-text">
+                  "Teknologi yang baik dalam urusan agama bukanlah yang menggantikan peran ulama atau ustaz, melainkan yang membantu umat menemukan rujukan sahih dengan rasa tenang dan penuh rasa hormat terhadap keragaman ijtihad."
+                </p>
+                <cite class="quote-author">— Ackmad Elfan Purnama</cite>
+              </blockquote>
+
+              <div class="creator-section">
+                <h4 class="creator-subheading">Prinsip Pengembangan</h4>
+                <div class="creator-values-grid">
+                  <div class="creator-value-item">
+                    <div class="value-icon"><i data-lucide="shield-check"></i></div>
+                    <div>
+                      <strong>Tanpa Fabrikasi</strong>
+                      <p>Hanya mencantumkan rujukan yang jelas sanad dan sumbernya.</p>
+                    </div>
+                  </div>
+                  <div class="creator-value-item">
+                    <div class="value-icon"><i data-lucide="scale"></i></div>
+                    <div>
+                      <strong>Menghargai Ikhtilaf</strong>
+                      <p>Menjelaskan perbedaan pendapat secara terbuka tanpa klaim mutlak sepihak.</p>
+                    </div>
+                  </div>
+                  <div class="creator-value-item">
+                    <div class="value-icon"><i data-lucide="feather"></i></div>
+                    <div>
+                      <strong>Manusiawi & Ramah</strong>
+                      <p>Disusun agar mudah dipahami oleh siapa pun tanpa rasa terintimidasi.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main><!-- /.site-main -->
+
+    <!-- ═══════════════════════════════════════════
+         BOTTOM TAB BAR (Mobile only)
+         ═══════════════════════════════════════════ -->
+    <nav class="bottom-nav" aria-label="Navigasi">
+      <button class="bnav-item active" data-view="home" id="bnav-home">
+        <i data-lucide="home"></i>
+        <span>Beranda</span>
+      </button>
+      <button class="bnav-item" data-view="wizard" id="bnav-wizard">
+        <i data-lucide="compass"></i>
+        <span>Pahami</span>
+      </button>
+      <button class="bnav-item" data-view="calculator" id="bnav-calculator">
+        <i data-lucide="scale"></i>
+        <span>Kalkulator</span>
+      </button>
+      <button class="bnav-item" data-view="knowledge" id="bnav-knowledge">
+        <i data-lucide="book-open"></i>
+        <span>Hukum</span>
+      </button>
+      <button class="bnav-item" data-view="audit" id="bnav-audit">
+        <i data-lucide="shield-check"></i>
+        <span>Transparan</span>
+      </button>
+    </nav>
+
+  </div><!-- /.app-shell -->
+
+  <!-- Modal Rule Detail -->
+  <div id="rule-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-rule-title">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <div class="modal-inner">
+        <div class="modal-top">
+          <span id="modal-rule-status" class="status-badge badge-green">Panduan langsung tersedia</span>
+          <button id="btn-close-rule-modal" class="btn-icon-close" aria-label="Tutup"><i data-lucide="x"></i></button>
+        </div>
+        <h3 id="modal-rule-title" class="modal-title">Detail Ketentuan</h3>
+
+        <div class="modal-rule-outcome-box">
+          <span class="outcome-label">Ketetapan Pokok</span>
+          <div id="modal-rule-outcome-text" class="modal-rule-outcome-val"></div>
+        </div>
+
+        <div class="modal-rule-body">
+          <div class="modal-rule-section">
+            <h4 class="modal-subheading"><i data-lucide="book-open"></i> Penjelasan Syariat</h4>
+            <div id="modal-rule-explanation" class="modal-sec-text"></div>
+          </div>
+
+          <div class="modal-rule-section" id="modal-rule-applicability-box">
+            <h4 class="modal-subheading"><i data-lucide="users"></i> Kondisi yang Berlaku</h4>
+            <div id="modal-rule-applicability" class="modal-sec-text"></div>
+          </div>
+
+          <div class="modal-rule-section" id="modal-rule-caveats-box">
+            <h4 class="modal-subheading"><i data-lucide="alert-circle"></i> Catatan & Kehati-hatian</h4>
+            <div id="modal-rule-caveats" class="modal-sec-text modal-sec-caveat"></div>
+          </div>
+
+          <div class="modal-rule-section">
+            <h4 class="modal-subheading"><i data-lucide="shield-check"></i> Rujukan Dalil Terverifikasi</h4>
+            <div id="modal-rule-sources" class="modal-sources-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Source Detail -->
+  <div id="source-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-source-title">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <div class="modal-inner">
+        <div class="modal-top">
+          <span id="modal-source-category" class="inline-badge badge-green">Sumber</span>
+          <button id="btn-close-source-modal" class="btn-icon-close" aria-label="Tutup"><i data-lucide="x"></i></button>
+        </div>
+        <h3 id="modal-source-title" class="modal-title">Detail Sumber</h3>
+
+        <div id="modal-source-arabic" class="arabic-text hidden"></div>
+
+        <dl class="modal-meta">
+          <dt>Referensi</dt>
+          <dd id="modal-source-ref"></dd>
+          <dt>Terjemahan / Penjelasan</dt>
+          <dd id="modal-source-trans"></dd>
+          <dt>Peranan dalam Hukum</dt>
+          <dd id="modal-source-role" class="meta-note"></dd>
+        </dl>
+
+        <a id="modal-source-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-outline">
+          <i data-lucide="globe"></i> Buka Tautan Resmi <i data-lucide="external-link"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="app-toast" class="toast" role="status" aria-live="polite">Notifikasi</div>
+
+  <script src="assets/js/lucide.min.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "SRC-QURAN-001",
+    "category": "Quran",
+    "title": "QS Al-Baqarah 2:184",
+    "reference": "Al-Qur'an Surah Al-Baqarah ayat 184",
+    "url": "https://quran.com/2/184",
+    "arabic_text": "أَيَّامًا مَّعْدُودَٰتٍ ۚ فَمَن كَانَ مِنكُم مَّرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِّنْ أَيَّامٍ أُخَرَ ۚ وَعَلَى ٱلَّذِينَ يُطِيقُونَهُۥ فِدْيَةٌ طَعَامُ مِسْكِينٍ ۖ فَمَن تَطَوَّعَ خَيْرًا فَهُوَ خَيْرٌ لَّهُۥ ۚ وَأَن تَصُومُوا۟ خَيْرٌ لَّكُمْ ۖ إِن كُنتُمْ تَعْلَمُونَ",
+    "translation_id": "(Yaitu) beberapa hari tertentu. Maka barangsiapa di antara kamu sakit atau dalam perjalanan (lalu tidak berpuasa), maka (wajib mengganti) sebanyak hari yang dia tinggalkan itu pada hari-hari yang lain. Dan bagi orang yang berat menjalankannya, wajib membayar fidyah, yaitu memberi makan seorang miskin. Tetapi barangsiapa dengan kerelaan hati mengerjakan kebajikan, maka itu lebih baik baginya, dan puasamu itu lebih baik bagimu jika kamu mengetahui.",
+    "role": "Dalil primer Al-Qur'an tentang rukhsah puasa bagi yang sakit dan musafir (qadha), serta penetapan fidyah bagi yang berat/tidak mampu menjalankannya."
+  },
+  {
+    "id": "SRC-QURAN-002",
+    "category": "Quran",
+    "title": "QS Al-Baqarah 2:185",
+    "reference": "Al-Qur'an Surah Al-Baqarah ayat 185",
+    "url": "https://quran.com/2/185",
+    "arabic_text": "شَهْرُ رَمَضَانَ ٱلَّذِىٓ أُنزِلَ فِيهِ ٱلْقُرْءَانُ هُدًى لِّلنَّاسِ وَبَيِّنَٰتٍ مِّنَ ٱلْهُدَىٰ وَٱلْفُرْقَانِ ۚ فَمَن شَهِدَ مِنكُمُ ٱلشَّهْرَ فَلْيَصُمْهُ ۖ وَمَن كَانَ مَرِيضًا أَوْ عَلَىٰ سَفَرٍ فَعِدَّةٌ مِّنْ أَيَّامٍ أُخَرَ ۗ يُرِيدُ ٱللَّهُ بِكُمُ ٱلْيُسْرَ وَلَا يُرِيدُ بِكُمُ ٱلْعُسْرَ وَلِتُكْمِلُوا۟ ٱلْعِدَّةَ وَلِتُكَبِّرُوا۟ ٱللَّهَ عَلَىٰ مَا هَدَىٰكُمْ وَلَعَلَّكُمْ تَشْكُرُونَ",
+    "translation_id": "Bulan Ramadan adalah (bulan) yang di dalamnya diturunkan Al-Qur'an, sebagai petunjuk bagi manusia dan penjelasan-penjelasan mengenai petunjuk itu dan pembeda (antara yang benar dan yang batil). Karena itu, barangsiapa di antara kamu ada di bulan itu, maka berpuasalah. Dan barangsiapa sakit atau dalam perjalanan (lalu ia berbuka), maka (wajiblah baginya berpuasa), sebanyak hari yang ditinggalkannya itu, pada hari-hari yang lain. Allah menghendaki kemudahan bagimu, dan tidak menghendaki kesukaran bagimu...",
+    "role": "Penegasan kewajiban puasa Ramadan, dispensasi bagi orang sakit dan musafir untuk qadha di hari lain, serta prinsip kemudahan dalam syariat."
+  },
+  {
+    "id": "SRC-HADITH-HAID-001",
+    "category": "Hadith",
+    "title": "Sahih Muslim 335c",
+    "reference": "Sahih Muslim No. 335c (Kitab Al-Haidh)",
+    "url": "https://sunnah.com/muslim:335c",
+    "arabic_text": "فَقَالَتْ كَانَ يُصِيبُنَا ذَلِكَ فَنُؤْمَرُ بِقَضَاءِ الصَّوْمِ وَلاَ نُؤْمَرُ بِقَضَاءِ الصَّلاَةِ",
+    "translation_id": "Aisyah radhiyallahu 'anha berkata: 'Dahulu kami mengalami hal itu (haid pada zaman Rasulullah ﷺ), maka kami diperintahkan untuk mengqadha puasa dan tidak diperintahkan untuk mengqadha salat.'",
+    "role": "Dalil hadits sahih menetapkan bahwa perempuan yang tidak berpuasa karena haid wajib mengqadha puasanya, dan fidyah bukan pengganti qadha bagi haid."
+  },
+  {
+    "id": "SRC-HADITH-SAFAR-001",
+    "category": "Hadith",
+    "title": "Sahih al-Bukhari 1943",
+    "reference": "Sahih al-Bukhari No. 1943 (Kitab ash-Shaum)",
+    "url": "https://sunnah.com/bukhari:1943",
+    "arabic_text": "إِنْ شِئْتَ فَصُمْ، وَإِنْ شِئْتَ فَأَفْطِرْ",
+    "translation_id": "Hamzah bin Amr Al-Aslami bertanya kepada Rasulullah ﷺ: 'Bolehkah aku berpuasa saat safar?' Rasulullah ﷺ menjawab: 'Jika engkau mau, berpuasalah, dan jika engkau mau, berbukalah.'",
+    "role": "Dalil sahih bahwa musafir memiliki pilihan (rukhsah) untuk berpuasa atau berbuka. Berstatus musafir tidak serta-merta mewajibkan qadha jika ia tetap berpuasa sah."
+  },
+  {
+    "id": "SRC-HADITH-SAFAR-002",
+    "category": "Hadith",
+    "title": "Sahih al-Bukhari 1946",
+    "reference": "Sahih al-Bukhari No. 1946",
+    "url": "https://sunnah.com/bukhari:1946",
+    "arabic_text": "لَيْسَ مِنَ الْبِرِّ الصِّيَامُ فِي السَّفَرِ",
+    "translation_id": "Rasulullah ﷺ melihat seorang laki-laki yang dinaungi dan orang-orang berkerumun di sekitarnya karena kepayahan berat, lalu beliau bersabda: 'Bukanlah termasuk kebajikan berpuasa dalam perjalanan (ketika membahayakan diri).'",
+    "role": "Dalil syariat bahwa jika safar menimbulkan kesulitan/mudarat yang sangat berat, mengambil rukhsah berbuka adalah jalan yang dianjurkan."
+  },
+  {
+    "id": "SRC-HADITH-SAFAR-003",
+    "category": "Hadith",
+    "title": "Sahih al-Bukhari 1947",
+    "reference": "Sahih al-Bukhari No. 1947",
+    "url": "https://sunnah.com/bukhari:1947",
+    "arabic_text": "سَافَرْنَا مَعَ رَسُولِ اللَّهِ صلى الله عليه وسلم فِي رَمَضَانَ، فَلَمْ يَعِبِ الصَّائِمُ عَلَى الْمُفْطِرِ، وَلاَ الْمُفْطِرُ عَلَى الصَّائِمِ",
+    "translation_id": "Anas bin Malik radhiyallahu 'anhu berkata: 'Kami bepergian bersama Rasulullah ﷺ pada bulan Ramadan, maka orang yang berpuasa tidak mencela orang yang berbuka, dan orang yang berbuka tidak mencela orang yang berpuasa.'",
+    "role": "Dalil bahwa para sahabat berbeda pilihan saat safar dalam suasana saling menghormati dan tidak memaksakan satu pilihan seragam."
+  },
+  {
+    "id": "SRC-HADITH-DECEASED-001",
+    "category": "Hadith",
+    "title": "Sahih al-Bukhari 1952",
+    "reference": "Sahih al-Bukhari No. 1952",
+    "url": "https://sunnah.com/bukhari:1952",
+    "arabic_text": "مَنْ مَاتَ وَعَلَيْهِ صِيَامٌ صَامَ عَنْهُ وَلِيُّهُ",
+    "translation_id": "Rasulullah ﷺ bersabda: 'Barangsiapa meninggal dunia dan ia memiliki utang puasa, maka walinya berpuasa untuknya.'",
+    "role": "Dalil sahih landasan kebolehan/anjuran wali berpuasa bagi orang yang meninggal dengan tanggungan utang puasa."
+  },
+  {
+    "id": "SRC-HADITH-DECEASED-002",
+    "category": "Hadith",
+    "title": "Sahih al-Bukhari 1953",
+    "reference": "Sahih al-Bukhari No. 1953",
+    "url": "https://sunnah.com/bukhari:1953",
+    "arabic_text": "أَنَّ امْرَأَةً، جَاءَتْ إِلَى رَسُولِ اللَّهِ صلى الله عليه وسلم فَقَالَتْ إِنَّ أُمِّي مَاتَتْ وَعَلَيْهَا صَوْمُ نَذْرٍ أَفَأَصُومُ عَنْهَا قَالَ أَرَأَيْتَ لَوْ كَانَ عَلَى أُمِّكِ دَيْنٌ فَقَضَيْتِيهِ أَكَانَ يُؤَدِّي ذَلِكِ عَنْهَا قَالَتْ نَعَمْ‏ قَالَ ‏فَصُومِي عَنْ أُمِّكِ",
+    "translation_id": "Seorang wanita datang kepada Rasulullah ﷺ dan berkata: 'Ibuku meninggal dan memiliki utang puasa nazar, apakah aku berpuasa untuknya?' Beliau bersabda: 'Bagaimana menurutmu jika ibumu memiliki utang lalu engkau melunasinya, apakah itu melunasinya?' Wanita itu menjawab: 'Ya.' Beliau bersabda: 'Maka berpuasalah untuk ibumu.'",
+    "role": "Hadits sahih analogi utang kepada Allah lebih berhak untuk dilunasi bagi yang meninggal dunia."
+  },
+  {
+    "id": "SRC-HADITH-DECEASED-003",
+    "category": "Hadith",
+    "title": "Sahih Muslim 1147",
+    "reference": "Sahih Muslim No. 1147",
+    "url": "https://sunnah.com/muslim:1147",
+    "arabic_text": "مَنْ مَاتَ وَعَلَيْهِ صِيَامٌ صَامَ عَنْهُ وَلِيُّهُ",
+    "translation_id": "Rasulullah ﷺ bersabda: 'Barangsiapa meninggal dunia dan ia memiliki tanggungan puasa, maka walinya berpuasa untuknya.'",
+    "role": "Riwayat Imam Muslim yang menguatkan kebolehan puasa oleh wali bagi mayit."
+  },
+  {
+    "id": "SRC-HADITH-DECEASED-004",
+    "category": "Hadith",
+    "title": "Sahih Muslim 1148a",
+    "reference": "Sahih Muslim No. 1148a",
+    "url": "https://sunnah.com/muslim:1148a",
+    "arabic_text": "فَدَيْنُ اللَّهِ أَحَقُّ أَنْ يُقْضَى",
+    "translation_id": "Rasulullah ﷺ bersabda: 'Maka utang kepada Allah lebih berhak untuk ditunaikan (dilunasi).'",
+    "role": "Prinsip pelunasan hak ibadah bagi orang yang telah wafat baik melalui qadha ahli waris atau fidyah sesuai ketentuan fiqh."
+  },
+  {
+    "id": "SRC-ATHAR-IBNABBAS-001",
+    "category": "Athar",
+    "title": "Ibn Abbas — Sahih al-Bukhari 4505",
+    "reference": "Atsar Sahabat Ibnu Abbas radhiyallahu 'anhuma, Sahih al-Bukhari No. 4505",
+    "url": "https://sunnah.com/bukhari:4505",
+    "arabic_text": "لَيْسَتْ بِمَنْسُوخَةٍ هُوَ الشَّيْخُ الْكَبِيرُ وَالْمَرْأَةُ الْكَبِيرَةُ لاَ يَسْتَطِيعَانِ أَنْ يَصُومَا فَيُطْعِمَانِ مَكَانَ كُلِّ يَوْمٍ مِسْكِينًا",
+    "translation_id": "Ibnu Abbas radhiyallahu 'anhuma menjelaskan mengenai ayat QS 2:184: 'Ayat ini tidak dimansukh. Ayat ini berlaku bagi kakek yang sudah tua dan nenek yang sudah tua yang tidak mampu lagi berpuasa, maka keduanya memberi makan setiap hari seorang miskin (fidyah).'",
+    "role": "Atsar sahabat sahih menjadi landasan utama penetapan fidyah bagi lansia yang tidak lagi memiliki kemampuan fisik untuk berpuasa secara permanen."
+  },
+  {
+    "id": "SRC-MUI-001",
+    "category": "Institutional",
+    "title": "MUI — Tak Puasa karena Uzur",
+    "reference": "Majelis Ulama Indonesia, 26 Februari 2026: 'Tak Puasa karena Uzur, Wajibkah Membayar Fidyah dan Qadha Puasa?'",
+    "url": "https://mui.or.id/public/baca/bimbingan/tak-puasa-karena-uzur-wajibkah-membayar-fidyah-dan-qadha-puasa-simak-penjelasan-ini",
+    "translation_id": "Panduan bimbingan fiqh MUI mengenai pembagian uzur puasa: sakit sementara wajib qadha; sakit kronis tanpa harapan sembuh membayar fidyah.",
+    "role": "Rujukan institusional kontemporer Indonesia yang merangkum kaidah uzur puasa, membedakan sakit sementara (qadha) dengan sakit permanen (fidyah)."
+  },
+  {
+    "id": "SRC-MUI-002",
+    "category": "Institutional",
+    "title": "MUI — Hamil dan Menyusui",
+    "reference": "Majelis Ulama Indonesia, 3 Maret 2026: 'Perempuan Hamil dan Menyusui Boleh Tak Puasa, Begini Ketentuannya'",
+    "url": "https://mui.or.id/public/index.php/baca/bimbingan/perempuan-hamil-dan-menyusui-boleh-tak-puasa-begini-ketentuannya",
+    "translation_id": "Penjelasan MUI berlandaskan kerangka Mazhab Syafi'i: jika khawatir diri sendiri wajib qadha saja; jika khawatir diri dan anak wajib qadha saja; jika khawatir kondisi anak saja wajib qadha serta fidyah.",
+    "role": "Rujukan institusional mendokumentasikan kerangka Mazhab Syafi'i terkait ibu hamil dan menyusui beserta rincian motif kekhawatiran."
+  },
+  {
+    "id": "SRC-MUI-003",
+    "category": "Institutional",
+    "title": "MUI — Telat Qadha Hingga Ramadhan Berikutnya",
+    "reference": "Majelis Ulama Indonesia, 15 Februari 2026: 'Telat Qadha Puasa Hingga Ramadhan Berikutnya Tiba, Ini Konsekuensi yang Harus Diperhatikan'",
+    "url": "https://mui.or.id/public/index.php/baca/bimbingan/telat-qadha-puasa-hingga-ramadhan-berikutnya-tiba-ini-konsekuensi-yang-harus-diperhatikan",
+    "translation_id": "Penjelasan konsekuensi menunda qadha tanpa uzur berlanjut sampai tiba Ramadhan berikutnya: dalam mazhab Syafi'i qadha tetap wajib ditambah kewajiban membayar fidyah.",
+    "role": "Rujukan institusional mendokumentasikan konsekuensi keterlambatan qadha dalam kerangka Mazhab Syafi'i."
+  },
+  {
+    "id": "SRC-MUI-004",
+    "category": "Institutional",
+    "title": "MUI — Haid dan Nifas",
+    "reference": "Majelis Ulama Indonesia, 3 Maret 2026: Bimbingan Fiqh Haid, Nifas, dan Puasa Ramadhan",
+    "url": "https://mui.or.id/baca/bimbingan/minum-obat-penunda-haid-demi-puasa-sebulan-penuh-bolehkah",
+    "translation_id": "Penjelasan fatwa dan bimbingan MUI bahwa darah haid dan nifas menghalangi sahnya puasa dan wanita wajib mengqadha hari yang ditinggalkan.",
+    "role": "Rujukan institusional menegaskan bahwa konsekuensi haid dan nifas murni qadha, bukan fidyah semata."
+  },
+  {
+    "id": "SRC-MUI-005",
+    "category": "Institutional",
+    "title": "MUI — Tata Cara Qadha Puasa",
+    "reference": "Majelis Ulama Indonesia, 13 Februari 2026: 'Masih Punya Utang Puasa, Ini Tata Cara Qadha Beserta Niatnya'",
+    "url": "https://mui.or.id/baca/bimbingan/masih-punya-utang-puasa-ini-tata-cara-qadha-beserta-niatnya",
+    "translation_id": "Panduan teknis dan niat dalam pelaksanaan qadha puasa Ramadhan sebelum tiba Ramadhan berikutnya.",
+    "role": "Rujukan institusional panduan pelaksanaan qadha puasa."
+  },
+  {
+    "id": "SRC-KEMENAG-001",
+    "category": "Institutional",
+    "title": "Kemenag RI — Tanya Jawab Fiqih Puasa & Orang Meninggal",
+    "reference": "Kementerian Agama Republik Indonesia: 'Meninggalkan Puasa Ramadhan, Adakah Ketentuan Khusus untuk Qadha?'",
+    "url": "https://kemenag.go.id/ar/tanya-jawab-fiqih/meninggalkan-puasa-ramadhan-adakah-ketentuan-khusus-untuk-qodha-OWRTO",
+    "translation_id": "Ulasan fiqih Kemenag RI memaparkan perbedaan pendapat ulama (ikhtilaf) mengenai fidyah bagi yang telat qadha serta opsi penunaian utang puasa bagi orang yang telah meninggal dunia.",
+    "role": "Rujukan institusional mendokumentasikan adanya ikhtilaf ulama tentang fidyah keterlambatan qadha dan tanggungan mayit."
+  },
+  {
+    "id": "SRC-BAZNAS-001",
+    "category": "Institutional",
+    "title": "BAZNAS RI — Panduan Fidyah",
+    "reference": "Badan Amil Zakat Nasional (BAZNAS) Republik Indonesia: 'Fidyah Puasa'",
+    "url": "https://www.baznas.go.id/fidyah",
+    "translation_id": "Panduan resmi BAZNAS RI mengenai kriteria wajib fidyah, tata cara penyaluran, dan peruntukan bagi fakir miskin.",
+    "role": "Rujukan operasional penyaluran dan edukasi fidyah di Indonesia."
+  },
+  {
+    "id": "SRC-BAZNAS-002",
+    "category": "Institutional",
+    "title": "BAZNAS RI — Penetapan Nilai Fidyah 2026 Rp65.000",
+    "reference": "BAZNAS RI Siaran Pers Resmi 2026: 'Ramadan 2026, BAZNAS RI Tetapkan Besaran Fidyah Rp65.000 per Hari'",
+    "url": "https://baznas.go.id/news-show/Ramadan_2026%2C_BAZNAS_RI_Tetapkan_Zakat_Fitrah_Rp50_Ribu/3708",
+    "translation_id": "Ketetapan BAZNAS RI untuk nilai fidyah dalam bentuk uang (makanan siap saji/paket sembako) tahun 2026 sebesar Rp65.000 per jiwa per hari.",
+    "role": "Rujukan operasional institusional tahun 2026 di tingkat nasional (Bukan angka universal syariat yang abadi, melainkan rujukan tahun berjalan BAZNAS)."
+  },
+  {
+    "id": "SRC-BAZNAS-003",
+    "category": "Institutional",
+    "title": "BAZNAS Daerah — Penyesuaian Nilai Wilayah 2026",
+    "reference": "BAZNAS Lampung / Daerah: 'Ramadan 2026 BAZNAS RI Tetapkan Zakat Fitrah dan Fidyah, Daerah Menyesuaikan'",
+    "url": "https://lampung.baznas.go.id/berita/news-show/ramadan-2026-baznas-ri-tetapkan-zakat-fitrah-dan-fidyah-daerah-agar-menyesuaikan/37312",
+    "translation_id": "Penjelasan bahwa penetapan nominal uang fidyah BAZNAS daerah dapat disesuaikan dengan harga bahan pokok dan taraf hidup di masing-masing daerah.",
+    "role": "Rujukan institusional operasional menegaskan bahwa nilai rupiah fidyah bervariasi secara regional dan tidak seragam mutlak."
+  },
+  {
+    "id": "SRC-NU-001",
+    "category": "Institutional",
+    "title": "NU Online — Fidyah dengan Uang dan Perbedaan Mazhab",
+    "reference": "Lembaga Bahtsul Masail Nahdlatul Ulama (NU Online): 'Bolehkah Membayar Fidyah Puasa dengan Uang?'",
+    "url": "https://islam.nu.or.id/ramadhan/bolehkah-membayar-fidyah-puasa-dengan-uang-D5BJY",
+    "translation_id": "Ulasan fiqih komparatif: Mayoritas ulama (Maliki, Syafi'i, Hanbali) mengharuskan fidyah dengan makanan mentah/pokok, sedangkan Mazhab Hanafi memperbolehkan pembayaran fidyah dengan qimah (uang seharga makanan).",
+    "role": "Dokumentasi ikhtilaf penting antara Mazhab Hanafi dan Jumhur mengenai fidyah uang."
+  },
+  {
+    "id": "SRC-NU-002",
+    "category": "Institutional",
+    "title": "NU Online — Kadar 1 Mud Fidyah Puasa",
+    "reference": "NU Online: '1 Mud Fidyah Puasa dan Konversinya ke Gram'",
+    "url": "https://islam.nu.or.id/puasa/1-mud-fidyah-puasa-L2cYW",
+    "translation_id": "Penjelasan takaran 1 mud dalam literatur fiqh Syafi'iyyah dan pendekatan konversinya di Indonesia berkisar ~675 gram (atau 6,75 ons / 0,675 kg) beras.",
+    "role": "Dokumentasi fiqih satuan 1 mud dan pendekatan konversi gram makanan pokok di Indonesia."
+  }
+]

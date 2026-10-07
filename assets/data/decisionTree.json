@@ -1,0 +1,380 @@
+{
+  "version": "3.0",
+  "root_question_id": "Q_MAIN",
+  "questions": {
+    "Q_MAIN": {
+      "id": "Q_MAIN",
+      "step_number": 1,
+      "title": "Kondisi Utama Puasa Ramadan",
+      "question_text": "Apa kondisi utama yang menyebabkan puasa Ramadan Anda (atau orang yang ditanyakan) terlewat?",
+      "help_text": "Pilih salah satu kondisi yang paling sesuai. Aplikasi akan memandu secara bertahap.",
+      "options": [
+        {
+          "id": "opt_sakit",
+          "label": "Sakit / Gangguan Kesehatan",
+          "description": "Mengalami sakit yang membuat tidak mampu atau dilarang berpuasa secara medis.",
+          "next_question_id": "Q_SAKIT"
+        },
+        {
+          "id": "opt_safar",
+          "label": "Dalam Perjalanan Jauh (Safar)",
+          "description": "Sedang bepergian jauh dalam rangka yang mubah/baik.",
+          "next_question_id": "Q_SAFAR"
+        },
+        {
+          "id": "opt_haid",
+          "label": "Mengalami Haid (Menstruasi)",
+          "description": "Wanita yang sedang kedatangan siklus haid saat bulan Ramadan.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-04",
+          "direct_result_type": "QADHA",
+          "classification": "Haid — Wajib Qadha"
+        },
+        {
+          "id": "opt_nifas",
+          "label": "Mengalami Nifas (Pasca Melahirkan)",
+          "description": "Wanita yang sedang masa nifas setelah melahirkan pada bulan Ramadan.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-05",
+          "direct_result_type": "QADHA",
+          "classification": "Nifas — Wajib Qadha"
+        },
+        {
+          "id": "opt_hamil_menyusui",
+          "label": "Hamil atau Sedang Menyusui",
+          "description": "Ibu hamil atau menyusui bayi yang mempertimbangkan keselamatan ibu dan anak.",
+          "next_question_id": "Q_HAMIL_MENYUSUI"
+        },
+        {
+          "id": "opt_lansia",
+          "label": "Lanjut Usia (Lansia) Sangat Lemah",
+          "description": "Orang tua yang fisiknya sudah renta dan tidak kuat lagi berpuasa.",
+          "next_question_id": "Q_LANSIA"
+        },
+        {
+          "id": "opt_telat_qadha",
+          "label": "Telat Qadha Sampai Ramadan Berikutnya",
+          "description": "Punya utang puasa tahun lalu dan belum sempat diqadha hingga Ramadan tahun ini tiba.",
+          "next_question_id": "Q_TELAT_QADHA"
+        },
+        {
+          "id": "opt_meninggal",
+          "label": "Meninggal Dunia dengan Utang Puasa",
+          "description": "Menanyakan status tanggungan puasa kerabat/orang tua yang telah wafat.",
+          "next_question_id": "Q_MENINGGAL"
+        },
+        {
+          "id": "opt_tanpa_uzur",
+          "label": "Sengaja Tidak Puasa / Batal Tanpa Uzur",
+          "description": "Meninggalkan puasa dengan sengaja atau membatalkannya tanpa alasan syar'i.",
+          "next_question_id": "Q_TANPA_UZUR"
+        }
+      ]
+    },
+    "Q_SAKIT": {
+      "id": "Q_SAKIT",
+      "step_number": 2,
+      "title": "Karakteristik Kondisi Sakit",
+      "question_text": "Bagaimana sifat kondisi sakit tersebut menurut kenyataan medis atau yang dirasakan?",
+      "help_text": "Aplikasi tidak mendiagnosis penyakit. Pertanyaan ini membedakan sakit yang diharapkan pulih dan sakit permanen.",
+      "options": [
+        {
+          "id": "opt_sakit_sementara",
+          "label": "Sakit Sementara (Diharapkan Pulih)",
+          "description": "Sakit biasa/akut yang secara wajar diharapkan akan sembuh sehingga mampu mengqadha puasa kelak.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-01",
+          "direct_result_type": "QADHA",
+          "classification": "Sakit Sementara — Wajib Qadha"
+        },
+        {
+          "id": "opt_sakit_kronis",
+          "label": "Sakit Kronis / Permanen (Tidak Diharapkan Pulih)",
+          "description": "Kondisi medis berat/menahun yang menurut dokter secara nyata tidak memungkinkan untuk berpuasa lagi di kemudian hari.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-02",
+          "direct_result_type": "FIDYAH",
+          "classification": "Sakit Kronis Permanen — Fidyah Berlaku"
+        },
+        {
+          "id": "opt_sakit_ragu",
+          "label": "Belum Yakin / Masih Observasi Medis",
+          "description": "Kondisi kesehatan belum dapat dipastikan apakah bisa pulih atau menetap.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-01",
+          "direct_result_type": "INSUFFICIENT_EVIDENCE",
+          "classification": "Ragu Status Sakit — Perlu Konsultasi Medis & Ahli Fiqih"
+        }
+      ]
+    },
+    "Q_SAFAR": {
+      "id": "Q_SAFAR",
+      "step_number": 2,
+      "title": "Pilihan Musafir Saat Perjalanan",
+      "question_text": "Saat bepergian (safar), apa yang sebenarnya Anda lakukan terkait puasa Ramadan?",
+      "help_text": "Status musafir memberikan keringanan (rukhsah), namun tidak otomatis mewajibkan qadha jika puasa tetap dituntaskan dengan sah.",
+      "options": [
+        {
+          "id": "opt_safar_buka",
+          "label": "Mengambil Keringanan (Tidak Berpuasa / Membatalkan)",
+          "description": "Memanfaatkan rukhsah safar untuk tidak berpuasa atau membatalkan puasa dalam perjalanan.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-03",
+          "direct_result_type": "QADHA",
+          "classification": "Musafir Mengambil Rukhsah — Wajib Qadha"
+        },
+        {
+          "id": "opt_safar_puasa",
+          "label": "Tetap Berpuasa Penuh & Puasa Sah",
+          "description": "Memilih tetap berpuasa selama perjalanan hingga maghrib tanpa membatalkannya.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-03",
+          "direct_result_type": "VALID_NO_OBLIGATION",
+          "classification": "Musafir Tetap Puasa Sah — Tidak Ada Utang Puasa"
+        },
+        {
+          "id": "opt_safar_ragu_jarak",
+          "label": "Ragu Apakah Jarak Sudah Memenuhi Syarat Safar",
+          "description": "Perjalanan dekat atau durasi singkat dan ragu apakah terkategori safar syar'i.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-03",
+          "direct_result_type": "FRAMEWORK_REQUIRED",
+          "classification": "Ragu Jarak Safar — Ikhtilaf Ukuran Jarak Mazhab"
+        }
+      ]
+    },
+    "Q_HAMIL_MENYUSUI": {
+      "id": "Q_HAMIL_MENYUSUI",
+      "step_number": 2,
+      "title": "Motif Kekhawatiran Ibu Hamil / Menyusui",
+      "question_text": "Apakah kekhawatiran utama Anda saat memutuskan tidak berpuasa?",
+      "help_text": "Berdasarkan penjelasan MUI dan Mazhab Syafi'i, motif kekhawatiran menentukan konsekuensi qadha atau qadha + fidyah.",
+      "options": [
+        {
+          "id": "opt_hamil_diri_sendiri",
+          "label": "Khawatir Kesehatan Diri Sendiri Saja",
+          "description": "Ibu merasa sangat lemas, pusing berat, dehidrasi, atau sakit jika memaksakan puasa.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-06",
+          "direct_result_type": "QADHA",
+          "classification": "Hamil/Menyusui Khawatir Diri Sendiri — Wajib Qadha Saja"
+        },
+        {
+          "id": "opt_hamil_diri_dan_bayi",
+          "label": "Khawatir Diri Sendiri Sekaligus Bayi",
+          "description": "Khawatir terhadap dampak buruk pada kesehatan ibu sekaligus kondisi janin atau bayi.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-06",
+          "direct_result_type": "QADHA",
+          "classification": "Hamil/Menyusui Khawatir Diri & Bayi — Wajib Qadha Saja"
+        },
+        {
+          "id": "opt_hamil_bayi_saja",
+          "label": "Hanya Khawatir Terhadap Kondisi Bayi / Janin / ASI",
+          "description": "Kondisi fisik ibu sebenarnya kuat, namun khawatir suplai ASI berkurang drastis atau perkembangan janin terganggu.",
+          "next_question_id": "Q_HAMIL_FRAMEWORK"
+        },
+        {
+          "id": "opt_hamil_ragu",
+          "label": "Tidak Yakin / Ragu Motif Mana yang Dominan",
+          "description": "Sulit membedakan antara kekhawatiran diri sendiri atau bayi.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-06",
+          "direct_result_type": "REVIEW_REQUIRED",
+          "classification": "Hamil/Menyusui Ragu Motif — Perlu Review Medis & Agama"
+        }
+      ]
+    },
+    "Q_HAMIL_FRAMEWORK": {
+      "id": "Q_HAMIL_FRAMEWORK",
+      "step_number": 3,
+      "title": "Pilihan Kerangka Fikih (Ikhtilaf Hamil/Menyusui)",
+      "question_text": "Dalam kasus khawatir terhadap bayi saja, para ulama berbeda pendapat. Kerangka mana yang ingin Anda gunakan?",
+      "help_text": "Fidyah Care tidak menyembunyikan perbedaan pendapat. Pilih pandangan yang ingin Anda terapkan.",
+      "options": [
+        {
+          "id": "opt_framework_syafii_ibu",
+          "label": "Mazhab Syafi'i (Rujukan Resmi MUI): Wajib Qadha + Fidyah",
+          "description": "Kewajiban dobel: ibu mengganti hari puasa di lain hari (qadha) DAN membayarkan fidyah 1 mud makanan pokok per hari.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-06",
+          "direct_result_type": "QADHA_AND_FIDYAH",
+          "selected_framework": "SHAFII_MUI",
+          "classification": "Hamil Khawatir Bayi (Mazhab Syafi'i) — Wajib Qadha & Fidyah"
+        },
+        {
+          "id": "opt_framework_ikhtilaf_ibu",
+          "label": "Tampilkan Komparasi Seluruh Mazhab (Ikhtilaf Transparan)",
+          "description": "Melihat rincian perbandingan antara Mazhab Syafi'i, Hanafi (qadha saja), dan atsar sebagian sahabat (fidyah saja).",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-06",
+          "direct_result_type": "IKHTILAF",
+          "selected_framework": "ALL_FRAMEWORKS",
+          "classification": "Hamil Khawatir Bayi — Perbedaan Pendapat Ulama (Ikhtilaf)"
+        }
+      ]
+    },
+    "Q_LANSIA": {
+      "id": "Q_LANSIA",
+      "step_number": 2,
+      "title": "Kemampuan Fisik Lansia",
+      "question_text": "Apakah kondisi fisik orang tua/lansia tersebut secara nyata sudah tidak mampu berpuasa berkelanjutan?",
+      "help_text": "Patokan syariat adalah ketidakmampuan fisik yang nyata ('ajzun mustamirr), bukan semata-mata angka umur KTP.",
+      "options": [
+        {
+          "id": "opt_lansia_tidak_mampu",
+          "label": "Ya, Fisik Sangat Lemah & Tidak Kuat Berpuasa Berkelanjutan",
+          "description": "Tidak sanggup lagi berpuasa karena faktor usia lanjut dan kelemahan fisik permanen.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-07",
+          "direct_result_type": "FIDYAH",
+          "classification": "Lansia Tidak Mampu Permanen — Wajib Membayar Fidyah"
+        },
+        {
+          "id": "opt_lansia_masih_mampu",
+          "label": "Masih Sehat & Fisik Cukup Kuat",
+          "description": "Meski berusia lanjut, kondisi kesehatan prima dan masih sanggup menjalankan puasa.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-07",
+          "direct_result_type": "VALID_NO_OBLIGATION",
+          "classification": "Lansia Masih Mampu — Tetap Wajib Puasa (Tidak Masuk Fidyah)"
+        }
+      ]
+    },
+    "Q_TELAT_QADHA": {
+      "id": "Q_TELAT_QADHA",
+      "step_number": 2,
+      "title": "Waktu & Penyebab Keterlambatan Qadha",
+      "question_text": "Bagaimana waktu pelaksanaan dan alasan belum tertunaikannya qadha puasa masa lalu?",
+      "help_text": "Ulama membedakan antara yang masih dalam rentang waktu, telat karena uzur bersambung, dan telat karena lalai.",
+      "options": [
+        {
+          "id": "opt_telat_belum_lewat",
+          "label": "Masih Sebelum Ramadan Berikutnya Datang (Syawal - Sya'ban)",
+          "description": "Saat ini masih berada dalam tahun berjalan sebelum masuk Ramadan berikutnya.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-08",
+          "direct_result_type": "QADHA",
+          "classification": "Qadha Dalam Waktu — Wajib Qadha Saja (Belum Kena Fidyah)"
+        },
+        {
+          "id": "opt_telat_uzur_bersambung",
+          "label": "Lewat Ramadan Berikutnya Karena Uzur Berkelanjutan",
+          "description": "Menunda bukan karena lalai, tetapi karena uzur tidak putus (misal sakit terus-menerus, atau hamil bersambung menyusui).",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-08",
+          "direct_result_type": "QADHA",
+          "classification": "Telat Qadha Karena Uzur Berlanjut — Wajib Qadha Saja Tanpa Fidyah"
+        },
+        {
+          "id": "opt_telat_tanpa_uzur",
+          "label": "Lewat Ramadan Berikutnya Tanpa Uzur Berkelanjutan (Menunda-nunda)",
+          "description": "Sempat memiliki waktu longgar dan sehat, namun menunda qadha hingga masuk Ramadan berikutnya.",
+          "next_question_id": "Q_TELAT_FRAMEWORK"
+        }
+      ]
+    },
+    "Q_TELAT_FRAMEWORK": {
+      "id": "Q_TELAT_FRAMEWORK",
+      "step_number": 3,
+      "title": "Pilihan Kerangka Fikih (Telat Qadha Lewat Ramadan)",
+      "question_text": "Terdapat perbedaan pendapat ulama terkait denda fidyah akibat menunda qadha hingga lewat Ramadan tanpa uzur. Kerangka mana yang Anda ikuti?",
+      "help_text": "MUI mendokumentasikan Mazhab Syafi'i, sementara Kemenag mencatat adanya ikhtilaf mazhab lain.",
+      "options": [
+        {
+          "id": "opt_framework_syafii_telat",
+          "label": "Mazhab Syafi'i (Rujukan MUI): Qadha Tetap Wajib + Denda Fidyah",
+          "description": "Wajib mengqadha puasa setelah Ramadan DAN membayar fidyah 1 mud per hari keterlambatan.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-08",
+          "direct_result_type": "QADHA_AND_FIDYAH",
+          "selected_framework": "SHAFII_MUI",
+          "classification": "Telat Qadha Tanpa Uzur (Mazhab Syafi'i) — Wajib Qadha & Fidyah"
+        },
+        {
+          "id": "opt_framework_hanafi_telat",
+          "label": "Mazhab Hanafi / Sebagian Ulama (Catatan Kemenag): Qadha Saja",
+          "description": "Kewajiban tetap qadha saja tanpa denda fidyah, disertai permohonan ampunan (istighfar) atas kelalaian.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-08",
+          "direct_result_type": "QADHA",
+          "selected_framework": "HANAFI_KEMENAG",
+          "classification": "Telat Qadha Tanpa Uzur (Mazhab Hanafi) — Wajib Qadha Saja"
+        },
+        {
+          "id": "opt_framework_ikhtilaf_telat",
+          "label": "Tampilkan Komparasi Kedua Pandangan (Ikhtilaf Transparan)",
+          "description": "Melihat rincian dalil kedua pandangan agar dapat mempertimbangkan secara utuh.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-08",
+          "direct_result_type": "FRAMEWORK_REQUIRED",
+          "selected_framework": "ALL_FRAMEWORKS",
+          "classification": "Telat Qadha Tanpa Uzur — Perbedaan Pendapat Ulama (Ikhtilaf)"
+        }
+      ]
+    },
+    "Q_MENINGGAL": {
+      "id": "Q_MENINGGAL",
+      "step_number": 2,
+      "title": "Kondisi Utang Puasa Orang yang Meninggal",
+      "question_text": "Bagaimana riwayat utang puasa almarhum/almarhumah semasa hidupnya?",
+      "help_text": "Kasus almarhum memerlukan penelaahan kasuistik dan tidak disimpulkan secara otomatis.",
+      "options": [
+        {
+          "id": "opt_meninggal_uzur_terus",
+          "label": "Uzur Berlanjut Hingga Wafat Tanpa Sempat Sembuh",
+          "description": "Almarhum terus dalam keadaan sakit atau uzur hingga meninggal dunia dan tidak sempat sembuh untuk qadha.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-11",
+          "direct_result_type": "REVIEW_REQUIRED",
+          "classification": "Meninggal Uzur Berlanjut — Ulama Memandang Gugur Tanggungan / Perlu Review"
+        },
+        {
+          "id": "opt_meninggal_sempat_mampu",
+          "label": "Sempat Sehat/Mampu Namun Wafat Sebelum Melunasi",
+          "description": "Almarhum memiliki kesempatan waktu untuk qadha namun wafat sebelum sempat menunaikannya.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-11",
+          "direct_result_type": "REVIEW_REQUIRED",
+          "classification": "Meninggal Sempat Mampu — Wali Berpuasa vs Fidyah Tirkah (Ikhtilaf & Review Ahli Fiqih)"
+        },
+        {
+          "id": "opt_meninggal_tidak_tahu",
+          "label": "Keluarga Tidak Mengetahui Riwayat Pastinya",
+          "description": "Jumlah hari atau kondisi kesehatan almarhum tidak diketahui secara pasti oleh ahli waris.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-11",
+          "direct_result_type": "INSUFFICIENT_EVIDENCE",
+          "classification": "Meninggal Informasi Tidak Cukup — Butuh Musyawarah Keluarga & Ustadz"
+        }
+      ]
+    },
+    "Q_TANPA_UZUR": {
+      "id": "Q_TANPA_UZUR",
+      "step_number": 2,
+      "title": "Bentuk Pelanggaran Meninggalkan Puasa Tanpa Uzur",
+      "question_text": "Bagaimana bentuk pembatalan atau kesengajaan tidak berpuasa tersebut?",
+      "help_text": "Fidyah Care tidak menggeneralisasi pelanggaran sengaja menjadi fidyah biasa.",
+      "options": [
+        {
+          "id": "opt_tanpa_uzur_makan",
+          "label": "Sengaja Makan, Minum, atau Tidak Niat Puasa",
+          "description": "Membatalkan puasa dengan makan/minum secara sadar tanpa ada uzur penyakit atau safar.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-12",
+          "direct_result_type": "CLASSIFICATION_ONLY",
+          "classification": "Sengaja Batal (Makan/Minum) — Wajib Taubat Nasuha & Wajib Qadha (Bukan Fidyah)"
+        },
+        {
+          "id": "opt_tanpa_uzur_jima",
+          "label": "Berhubungan Suami Istri (Jima') di Siang Hari Ramadan",
+          "description": "Melakukan jima' pada saat sedang berpuasa Ramadan.",
+          "next_question_id": null,
+          "direct_rule_id": "RULE-12",
+          "direct_result_type": "CLASSIFICATION_ONLY",
+          "classification": "Jima' di Siang Ramadan — Terkena Kaffarah Berat (Bukan Fidyah Harian)"
+        }
+      ]
+    }
+  }
+}

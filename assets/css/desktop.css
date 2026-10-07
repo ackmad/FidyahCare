@@ -1,0 +1,314 @@
+/**
+ * Fidyah Care — Desktop Layout Styling (>=1024px)
+ * Single Clean Header, Responsive Grid, 2-Column Calculator, Centered Dialogs.
+ */
+
+@media (min-width: 1024px) {
+
+  /* 1. ROOT & BODY */
+  body {
+    background-color: #F8FAF7;
+    background-image: radial-gradient(#0D5C3A 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    background-color: #F7FAF6;
+  }
+
+  .site-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(13, 92, 58, 0.1);
+    box-shadow: 0 1px 12px rgba(13, 92, 58, 0.04);
+  }
+
+  .site-header-inner {
+    height: 70px;
+    padding: 0 var(--space-6);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .header-brand {
+    justify-self: start;
+  }
+
+  .header-wordmark {
+    font-size: 1.25rem;
+  }
+
+  /* Desktop Nav is visible & centered in header */
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 4px;
+    background: rgba(13, 92, 58, 0.04);
+    padding: 4px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(13, 92, 58, 0.08);
+  }
+
+  .site-header-spacer {
+    display: block;
+  }
+
+  .dnav-link {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+  }
+
+  .dnav-link.active {
+    background: #fff;
+    color: var(--primary);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Hide Mobile Bottom Nav completely on desktop */
+  .bottom-nav {
+    display: none !important;
+  }
+
+  /* 2. SITE MAIN */
+  .site-main {
+    padding: var(--space-8) var(--space-6);
+    max-width: 1200px;
+  }
+
+  /* 3. BERANDA (HUB) */
+  #view-home .page-hero {
+    text-align: center;
+    max-width: 720px;
+    margin: var(--space-4) auto var(--space-8);
+  }
+
+  #view-home .page-hero-title {
+    font-size: 2.25rem;
+    letter-spacing: -0.03em;
+  }
+
+  #view-home .page-hero-desc {
+    font-size: 1rem;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .hub-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+    margin-bottom: var(--space-8);
+  }
+
+  .hub-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-6);
+    gap: var(--space-4);
+    border-radius: var(--radius-xl);
+  }
+
+  .hub-card-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .hub-card-title {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  .hub-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .hub-card-arrow {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+
+  .home-disclaimer {
+    max-width: 740px;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* 4. WIZARD (PAHAMI) */
+  #view-wizard {
+    max-width: 660px;
+    margin: var(--space-4) auto;
+  }
+
+  .question-text {
+    font-size: 1.45rem;
+  }
+
+  .option-button {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .option-label {
+    font-size: 0.95rem;
+  }
+
+  .option-desc {
+    font-size: 0.82rem;
+  }
+
+  #wizard-result-box {
+    padding: var(--space-8);
+  }
+
+  .result-verdict-title {
+    font-size: 1.5rem;
+  }
+
+  .result-explanation {
+    font-size: 0.95rem;
+  }
+
+  /* 5. KALKULATOR (2-COLUMN DESKTOP LAYOUT) */
+  .calc-layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .calc-panel {
+    padding: var(--space-6);
+  }
+
+  .panel-title {
+    font-size: 1.35rem;
+  }
+
+  .calc-result-panel {
+    position: sticky;
+    top: 90px;
+    padding: var(--space-6);
+  }
+
+  .result-numbers {
+    padding: var(--space-5);
+  }
+
+  .result-number-val--large {
+    font-size: 1.75rem;
+  }
+
+  .result-monetary-val {
+    font-size: 1.75rem;
+  }
+
+  /* 6. DASAR HUKUM (KNOWLEDGE BASE) */
+  #view-knowledge {
+    max-width: 1100px;
+  }
+
+  .rules-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .sources-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .foundation-content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: var(--space-6);
+  }
+
+  /* 7. TRANSPARANSI */
+  #view-audit {
+    max-width: 840px;
+  }
+
+  .trust-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+
+  .trust-principle {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-4);
+    text-align: left;
+  }
+
+  /* 8. MODAL DIALOG ON DESKTOP */
+  .modal-overlay {
+    align-items: center;
+    padding: var(--space-4);
+  }
+
+  .modal-sheet {
+    max-width: 580px;
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes modalPop {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .modal-handle {
+    display: none;
+  }
+
+  /* Toast position */
+  .toast {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    transform: translateY(20px);
+  }
+
+  .toast.show {
+    transform: translateY(0);
+  }
+
+  /* 9. TENTANG PEMBUAT (CREATOR PROFILE) */
+  #view-creator {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .creator-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .creator-card {
+    position: sticky;
+    top: 90px;
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .creator-content {
+    padding: var(--space-8);
+  }
+
+  .creator-heading {
+    font-size: 1.6rem;
+  }
+
+  .creator-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+
+  .creator-value-item {
+    flex-direction: column;
+    padding: var(--space-4);
+  }
+}
